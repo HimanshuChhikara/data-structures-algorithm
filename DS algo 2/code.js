@@ -19,7 +19,7 @@ var inputData = [
 
 findAnimal = function() {
     for(x=0; x<3; x++) {
-        if(inputData[x].title = args[0]) {
+        if(inputData[x].title = inputData[0]) {
             var answer = inputData[x].faveFood
         }
     }

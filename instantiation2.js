@@ -4,7 +4,7 @@ class Car{
         this.tyre = tyre;
     }
     Introduce(){
-        console.log(`This is car that have ${this.engine} engine and ${this.tyre}`);
+        console.log(`This is car that have ${this.engine} engine and ${this.tyre} tyres`);
     }
 }
 
