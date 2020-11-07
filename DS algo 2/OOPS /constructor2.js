@@ -23,7 +23,7 @@ var person1 = new person('Himanshu','Chhikara','26','male');
 var bio = person1.bio();;
 
 console.log(bio);
-// console.log(person1);
+console.log(person1);
 
 // var res = person.bio;
 // console.log(res)
