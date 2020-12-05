@@ -74,5 +74,5 @@ function sort_0_1_2(arr){
         return arr;
 }
 
-var res = sort_0_1_2([2,0,1]);
+var res = sort_0_1_2([2,0,1,1,2,0,0,1,0,2]);
 console.log(res);
