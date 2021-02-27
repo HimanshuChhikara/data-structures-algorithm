@@ -29,7 +29,10 @@ var arra = Array.apply(null,Array(100))
     catch(err){
         reject(new Error(err))
     }
-     })  
+     })
+     Promise.resolve("Solved")
+     .then(res => console.log(even));
+       
   }
   squareEvenNumbers();
 

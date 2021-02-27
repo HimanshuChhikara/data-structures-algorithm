@@ -20,7 +20,7 @@
 // var result = removeDublicate();
 // console.log(result);
 
-function remove(Arr,value){
+function remove(Arr){
     // var Arr = [1,2,2,3,4,5,2];
     // var value = 2;
     var Result = [];
@@ -36,4 +36,4 @@ function remove(Arr,value){
     console.log(Result.length);
 }
 
-remove([0,1,2,2,3,0,4,2],2)
+remove([0,1,2,2,3,0,4,2])
