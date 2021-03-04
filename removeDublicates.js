@@ -22,7 +22,7 @@
 
 function remove(Arr){
     // var Arr = [1,2,2,3,4,5,2];
-    // var value = 2;
+    var value = 2;
     var Result = [];
 
     var len = Arr.length;
