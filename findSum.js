@@ -5,11 +5,11 @@ function findSum(arr,sum){
     while(i<j){
         if(arr[i]+arr[j] < sum){
             i++;
-            console.log(arr[i])
-            console.log(arr[j])
+            // console.log(arr[i])
+            // console.log(arr[j])
         }else if(arr[i]+arr[j]>sum){
             j++;
-            console.log(arr[i])
+            // console.log(arr[i])
         }
         else if(arr[i]+arr[j] == sum){
             return true
