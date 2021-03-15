@@ -21,7 +21,7 @@ function twoMissing(){
         }
         // return MissingArray
     }
-// return MissingArray;
+return MissingArray;
 }
 
 twoMissing()

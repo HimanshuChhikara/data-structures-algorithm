@@ -1,3 +1,5 @@
+// MAP ALWAYS USES for...of Loop
+
 function countWords(S){
     
    var constMap = new Map(); // Create an empty Map
