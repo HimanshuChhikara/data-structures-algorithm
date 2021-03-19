@@ -9,7 +9,7 @@ function waitforme(rand) {
 
 async function printy() { 
 	for (let i = 0; i < 10; ++i) { 
-        // console.log(rand);
+        console.log(rand);
 		await waitforme(); 
 		console.log(i); 
 	} 
