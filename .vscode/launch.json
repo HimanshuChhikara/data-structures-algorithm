@@ -15,7 +15,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/console.js",
+            "program": "${workspaceFolder}/multipleCount.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]

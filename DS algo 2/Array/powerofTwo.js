@@ -3,7 +3,7 @@
 
 var isPowerOfTwo = function(n) {
     let i = 2;
-    // loop to end of number say 16
+    // loop till end of number say 16
     while(i<n){
         console.log("before "+i)
         i *= 2; // multiply each number by 2 so that last number get multiple of two
