@@ -5,10 +5,15 @@ var firstUniqChar = function(s) {
         const char = s[i]
 
         empty[char] = empty[char]+1 || 1
+
+        if(empty[char] === 1){
+            return i
+        }
         
     }
     for(let i = 0;i<s.length;i++){
             const char = s[i]
+            console.log("Value of Char  "+ char)
             if(empty[char] === 1){
                 return i
             }
@@ -16,4 +21,4 @@ var firstUniqChar = function(s) {
     return -1
 };
 
-console.log(firstUniqChar('Himanshu'))
+console.log(firstUniqChar('leel'))
