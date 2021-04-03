@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
     {
         "type": "chrome",
         "request": "attach",
@@ -15,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/multipleCount.js",
+            "program": "${workspaceFolder}/DS algo 2/Array/sortParity.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
