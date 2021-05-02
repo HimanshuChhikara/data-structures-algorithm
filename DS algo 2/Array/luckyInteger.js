@@ -1,15 +1,14 @@
-function luckyInteger(arr){
-    const len = arr.length;
-    var map = new Map();
+var findLucky = function(arr) {
+  var count = {}
+  
+  for(var i=0; i<arr.length; i++){
+      var num = arr[i]
 
-    for(var i = 0;i<len;i++){
-        map.set(i,arr[i])
-    }
-    // map.reduce((acc,it)=>{
-    //     acc[it.i] = acc[it.i] + 1 || 1
-    //     return acc    
-    // })
-    return map
-}
+      count[num] = count[num] ? count[num] + 1 : 1
 
-console.log(luckyInteger([1,2,3,4,1]))
+  }
+
+  console.log(count)
+};
+
+console.log(findLucky([2,2,3,4,2]));
