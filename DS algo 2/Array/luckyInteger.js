@@ -7,8 +7,11 @@ var findLucky = function(arr) {
       count[num] = count[num] ? count[num] + 1 : 1
 
   }
-
-  console.log(count)
+  let max = -1;
+  for(let res in count){
+      if(Number(res) === count[res] &&  Number(res)> max) max= Number(res)
+  }
+  return max
 };
 
 console.log(findLucky([2,2,3,4,2]));

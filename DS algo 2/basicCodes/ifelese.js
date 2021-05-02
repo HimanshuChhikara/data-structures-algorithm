@@ -1,5 +1,5 @@
-const x = 8;
-console.log(x)
+let x = 8;
+// console.log(x)
 if(x<9){
     console.log(9);
 }

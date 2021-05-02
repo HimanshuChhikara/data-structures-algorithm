@@ -16,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/DS algo 2/Array/sortParity.js",
+            "program": "${workspaceFolder}/DS algo 2/Array/maxConsecutive.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
