@@ -16,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/DS algo 2/Array/maxConsecutive.js",
+            "program": "${workspaceFolder}/DS algo 2/Array/luckyInteger.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
