@@ -16,7 +16,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/DS algo 2/Array/findMissing",
+            "program": "${workspaceFolder}/DS algo 2/basicCodes/coercion.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
