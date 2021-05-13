@@ -17,18 +17,33 @@
 // var answer = missingnumber([9,6,4,2,3,5,7,0,1]);
 // console.log(answer)
 
-var missingNumber = function(nums) {
-    let missing = 0
-    let sum1 = 0
-    let sum2 = 0
-    for(let i = 0;i<nums.length;i++){
-      sum1+= nums[i]
-      console.log(`Value of sum1 ${sum1}`);
-      sum2+=i+1
-      console.log(`value of sum2 ${sum2}`)
-    }
+// var missingNumber = function(nums) {
+//     let missing = 0
+//     let sum1 = 0
+//     let sum2 = 0
+//     for(let i = 0;i<nums.length;i++){
+//       sum1+= nums[i]
+//       console.log(`Value of sum1 ${sum1}`);
+//       sum2+=i+1
+//       console.log(`value of sum2 ${sum2}`)
+//     }
     
-    return sum2 - sum1
-};
+//     return sum2 - sum1
+// };
 
-console.log(missingNumber([3,0,1]))
+// console.log(missingNumber([3,0,1]))
+
+
+var missingNumber = function missingnumbers(nums){
+   const map = new Map();
+   nums.forEach((num,i)=> map.set(num,i))
+
+   const result = []
+
+   for(let i=1;i<=nums.length;i++){
+     if(!map.has(i)) result.push(i)
+   }
+   console.log(result)
+}
+
+missingNumber([1,1])
