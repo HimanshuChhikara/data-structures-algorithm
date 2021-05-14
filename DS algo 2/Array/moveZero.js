@@ -1,26 +1,26 @@
-function moveZero(nums){
-    var index =0;
+// function moveZero(nums){
+//     var index =0;
     
-    for(var i=0;i < nums.length;i++){
+//     for(var i=0;i < nums.length;i++){
     
-        if(nums[i]!=0){
+//         if(nums[i]!=0){
     
-            console.log(i);
+//             console.log(i);
 
-            console.log("value of nums[i]" + nums[i])
+//             console.log("value of nums[i]" + nums[i])
 
-            nums[index] = nums[i]
+//             nums[index] = nums[i]
 
-            index++
+//             index++
 
-        }
-    };
+//         }
+//     };
     
-    var fill = nums.fill(0,index);
-    console.log(nums)
-}
+//     var fill = nums.fill(0,index);
+//     console.log(nums)
+// }
 
-moveZero([0,1,12,0,1])
+// moveZero([0,1,12,0,1])
 
 // // var moveZeroes = function (nums) {
 // //     for (let i = 0; i < nums.length; i++) {
@@ -54,3 +54,21 @@ moveZero([0,1,12,0,1])
 
 // var res = moveZero([1,0,1,0,2,0,3])
 // console.log(res);
+
+
+function moveZero(arr){
+    var temp  = 0
+    for(var i = 0;i<arr.length;i++){
+        for(var j =i+1; j<arr.length ;j++){
+            if(arr[i] > arr[j]){
+               temp = arr[j];
+               arr[j] = arr[i]
+               arr[i] = temp
+            }
+        }
+    }
+    return arr
+}
+
+var res = moveZero([2, 7, 0, 4, 3, 0, 5, 0])
+console.log(res)

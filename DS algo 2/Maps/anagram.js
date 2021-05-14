@@ -1,16 +1,24 @@
 function ifAnagram(s,t){
     if(s.length !== t.length) return false
+     
+    let hashMapS = new Map()
+    let hashMapT = new Map()
 
-    let map1 = new Map()
-    let map2 = new Map()
-
-    for(let i =0; i<s.length; i++){
-        map1.set(s[i],map.get(s[i]+1 || 1))
-        map2.set(t[i], map.get(s[j]+1 || 1))
+    for(let i = 0; i<s.length; i++){
+        hashMapS.set(s[i],(hashMapS.get(s[i]) || 0) + 1)
+        hashMapT.set(t[i],(hashMapT.get(t[i]) ||0 ) + 1)
     }
-    if(map1.size !== map2.size) return false
+    console.log(hashMapS)
+    console.log(hashMapT)
 
-    for(let [key,value] of map1) if (map2.get(key) != value) return false
-
+    for(values of hashMapS){
+        if(hashMapT.get(values[0]) !== values[1]){
+            return false
+        }
+    
+    }
     return true
+
 }
+
+var res = ifAnagram("anagram","nagaram")
