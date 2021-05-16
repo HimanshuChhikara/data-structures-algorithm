@@ -15,6 +15,7 @@ function sort_0_1_2(arr){
             }
         }
     var i = 0;
+// console.log(count_Zero)
         while(count_Zero--){
             arr[i] = 0; 
             i++;

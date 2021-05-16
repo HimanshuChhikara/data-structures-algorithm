@@ -5,8 +5,8 @@ var sortArrayByParity = function(A) {
       for(var i=0;i<len;i++){
         // console.log(i);
          if( A[i] % 2 == 0){
-           console.log("Value of i " + i)
-           console.log(A[index])
+          //  console.log("Value of i " + i)
+          //  console.log(A[index])
            //Here Swapping of even number is done
           var temp = A[index];
           A[index++] = A[i];
