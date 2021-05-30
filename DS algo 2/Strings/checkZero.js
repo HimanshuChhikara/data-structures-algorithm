@@ -26,4 +26,4 @@ var checkZeroOnes = function(s) {
     
     return false
 };
-console.log(checkZeroOnes('1101'))
+console.log(checkZeroOnes('101'))
