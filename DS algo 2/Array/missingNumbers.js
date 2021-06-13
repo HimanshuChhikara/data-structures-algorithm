@@ -12,10 +12,12 @@ function missingNumber(nums){
             }
            
         }
-        console.log(res)
+        // console.log(res)
     }
+    return res
+    
     
 }
 
-var ans = missingNumber([1,1])
+var ans = missingNumber([8,10,12,14,16])
 console.log(ans)
