@@ -24,3 +24,20 @@ Gotcha's
 1. What if we change the value of a to 100 on before returning y ?
  Ans : Value will be changed to 100 because it is refering to the address of a not the value of a. We just changed the value of a but address of a is still same that why it will return updated value
  
+ 
+Closure most asked interview question :
+
+```
+function x() {
+    for(var i =0; i<= 5; i++) {
+        function k(i){
+            setTimeout(function() { 
+                console.log(i);
+            }, i * 1000);
+        }
+        k(i)
+    }
+}
+
+x();
+```
