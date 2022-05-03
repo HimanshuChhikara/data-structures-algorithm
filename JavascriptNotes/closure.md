@@ -26,6 +26,7 @@ Gotcha's
  
  
 Closure most asked interview question :
+Print number 1 - 5 on each interval should be number of sec
 
 ```
 function x() {
