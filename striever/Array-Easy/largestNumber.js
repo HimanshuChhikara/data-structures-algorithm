@@ -1,3 +1,7 @@
+// Input: arr[] = {8,10,5,7,9};
+// Output: 10
+// Explanation: 10 is the largest element in the array. 
+
 function findLargest(arr) {
 
     let largest = arr[0];
