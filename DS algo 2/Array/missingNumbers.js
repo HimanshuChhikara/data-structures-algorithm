@@ -1,23 +1,30 @@
 function missingNumber(nums){
-    // var sort = nums.sort((a,b) =>)
+    nums = nums.sort((a,b) =>a-b)
 
-    var diff = nums[0] - 0
-    var res = []
+    // var diff = nums[0] - 0
+    // var res = []
 
-    for(var i=1;i<nums.length;i++){
-        if(nums[i]-i != diff){
-            while(diff < nums[i]-i){
-                res.push(diff+i)
-                diff++
-            }
+    // for(var i=1;i<nums.length;i++){
+    //     if(nums[i]-i != diff){
+    //         while(diff < nums[i]-i){
+    //             res.push(diff+i)
+    //             diff++
+    //         }
            
+    //     }
+    //     // console.log(res)
+    // }
+    // return res
+    let res = [];
+
+    for(let i=0;i<nums.length-1;i++) {
+        if(nums[i]+1 != nums[i+1]) {
+            res.push(nums[i]+1);
         }
-        // console.log(res)
     }
-    return res
-    
+    return res;
     
 }
 
-var ans = missingNumber([8,10,12,14,16])
+var ans = missingNumber([1,2,4,5,7,9])
 console.log(ans)
