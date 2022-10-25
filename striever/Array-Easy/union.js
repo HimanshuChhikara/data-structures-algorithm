@@ -52,13 +52,8 @@ function union(arr1,arr2,n,m) {
                 res.push(arr2[j]);
                 j++
             }
+            j++;
         }
-        // if(arr1[i] === arr2[j]) {
-        //     if(res[res.length-1] != arr1[i]){
-        //         res.push(arr1[i]);
-        //     }
-        //     i++
-        // }
     }
 
     while(i<n) {
