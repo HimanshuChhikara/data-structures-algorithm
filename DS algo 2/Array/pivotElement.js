@@ -1,36 +1,22 @@
 function piviotElement(nums) {
-    // let higherSum = 0;
-    // let lowerSum = 0;
-    // let i = 0;
-    // let j = nums.length - 1;
+    let rightSum = 0;
 
-    // while(i!=j) {
-    //     lowerSum = lowerSum + nums[i];
-    //     if(higherSum === lowerSum) {
-    //         return i+1;
-    //     }
-    //     higherSum = higherSum + nums[j];
-    
-    //     i++;
-    //     j--;
-    // }
-    // return -1;
-    let leftSum=0,rightSum=0;
-    for(let i=1; i<nums.length; i++){
-        rightSum+=nums[i];
+    for(let i=0;i<nums.length;i++) {
+        rightSum += nums[i];
     }
     
-    
-    for(let i=0; i<nums.length; i++){
-        let candidate = nums[i];
-        if(leftSum === rightSum) return i;
-        else{
-            leftSum += candidate;
-            rightSum -= nums[i+1]
+    let halfSum = rightSum / 2;
+
+    let leftSum = rightSum;
+    for(let j=nums.length-1;j>0;j--) {
+        leftSum = leftSum - nums[j];
+
+        if(leftSum < halfSum && nums[j] === nums[0]) {
+            return j;
         }
-
     }
-    return -1
+    return -1;
+
 }
 
-console.log(piviotElement([1,7,3,6,5,6]))
+console.log(piviotElement([1,2,3]))
