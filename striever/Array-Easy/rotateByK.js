@@ -1,9 +1,9 @@
 function rotatebyK(nums,k) {
 
     let i = 0;
-    let j = k + 1;
+    let j = k;
 
-    while(j <= nums.length-1&& i<=k+1) {
+    while(j <= nums.length && i<=k) {
         let temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
@@ -13,4 +13,4 @@ function rotatebyK(nums,k) {
     return nums;
 }
 
-console.log(rotatebyK([1,2,3,4,5,6,7],3));
+console.log(rotatebyK([1,2,3,4,5],3));
