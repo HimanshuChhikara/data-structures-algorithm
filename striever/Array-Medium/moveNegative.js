@@ -1,7 +1,6 @@
 var rearrangeArray = function(nums) {
    let negative = [];
    let positive = [];
-   let output = [];
 
    for(let i =0;i<nums.length;i++) {
         if(nums[i] < 0) {
@@ -11,16 +10,22 @@ var rearrangeArray = function(nums) {
             positive.push(nums[i]);
         }
    }
-   let j = 0;
-   let k = 0;
+   let countE = 0;
+   let countO = 0;
+   let count = 0;
 
-   while(j<negative.length && k<positive.length) {
-        output.push(positive[k]);
-        output.push(negative[j]);
-        j++;
-        k++
+   for(let j=0;j<nums.length;j++) {
+    if(count % 2 === 0) {
+        nums[count] = positive[countE];
+        countE++
+    }
+    else{
+        nums[count] = negative[countO];
+        countO++;
+    }
+    count++
    }
-   return output;
+   return nums;
 };
 
 console.log(rearrangeArray([3,1,-2,-5,2,-4]))
