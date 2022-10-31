@@ -18,20 +18,20 @@ function majorityElement(nums) {
     // }
 
     let count = 0;
-    let el = 0;
+    let candidate;
 
     for(let i=0;i<nums.length;i++) {
         if(count === 0) {
-            el = nums[i];
+            candidate = nums[i];
         }
-        if(el === nums[i]) {
+        if(candidate === nums[i]) {
             count++;
         }
         else {
             count--;
         }
     }
-    return el;
+    return candidate;
 }
 
 console.log(majorityElement([3,2,3]))
