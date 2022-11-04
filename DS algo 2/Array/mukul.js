@@ -2,7 +2,7 @@ function mergeArray(left,right,arr) {
     let i = 0;
     let j = 0;
     let k = 0;
-
+    
     while(i<left.length && j < right.length) {
         if(left[i] < right[j]) {
             arr[k] = left[i];
