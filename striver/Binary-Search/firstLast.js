@@ -1,24 +1,26 @@
 function searchRange(nums,target) {
-    let res = -1;
-    let low = 0;
-    let high = nums.length - 1;
-
-    while(low <= high) {
-        let mid = Math.floor((low + high) / 2);
-
-        if(nums[mid] === target) {
-            res = mid
-        }
-        else if(nums[mid] > target) {
-            high = mid-1;
-        }
-        else {
-            low = mid + 1;
-        }
-        
+    let res = [];
+    if(nums.length === 0) {
+        return [-1,-1];
     }
-    
+    for(let i=0;i<nums.length;i++) {
+        if(nums[i] === target) {
+            if(res.length ===0 ) {
+               res[0] = i;
+               res[1] = i;
+            }
+            else {
+                res[1] = i;
+            }
+        }
+        else if(nums[i] > target) {
+            break
+        }
+    }
+    if(res.length === 0) {
+        return [-1,-1]
+    }
     return res;
 }
 
-console.log(searchRange([5,7,7,8,8,10],8));
+console.log(searchRange([],0));
