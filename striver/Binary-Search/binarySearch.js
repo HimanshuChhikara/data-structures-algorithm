@@ -15,4 +15,4 @@ function binarySearch(nums,target) {
     return nums[high] === target ? high : -1;
 }
 
-console.log(binarySearch([-1,0,3,5,9,12]))
+console.log(binarySearch([-1,0,3,5,9,12],9))
