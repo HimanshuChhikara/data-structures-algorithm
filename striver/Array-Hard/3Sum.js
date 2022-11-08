@@ -35,5 +35,5 @@ function threeSum(nums) {
     }
     return results
 }
-
+// [-4,-1,-1,0,1,2]
 console.log(threeSum([-1,0,1,2,-1,-4]));

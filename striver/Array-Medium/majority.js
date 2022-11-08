@@ -4,18 +4,18 @@
 // Output: 2
 
 function majorityElement(nums) {
-    // let map = {};
-
-    // for(let i=0;i<nums.length;i++) {
-    //     map[nums[i]] = map[[nums[i]]] + 1 || 1;
-    // }
-
-    // let n = Math.floor(nums.length / 3);
-    // for(let key in map) {
-    //     if(map[key] >= n) {
-    //         return key;
+    // let map = new Map();
+    // let arr = [];
+    // for (let n of nums) {
+    //     map.set(n,map.get(n)+1 || 1);
+    // }    
+    // console.log("Map is == ",map)
+    // for (let [key,value] of map){
+    //     if (value > Math.floor(nums.length/3)) {
+    //         arr.push(key);
     //     }
     // }
+    // return arr;
 
     let count = 0;
     let candidate;
