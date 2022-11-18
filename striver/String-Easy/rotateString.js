@@ -1,23 +1,11 @@
 function rotateString(s,goal) {
-    let i = 0;
-    let j = 0;
+    if(s === goal) return true;
 
-    while(j < goal.length) {
-        if(s[i] != goal[j]) {
-            i++;
-        }
-        if(s[i] === goal[j]) {
-            i++;
-            j++;
-        }
-        if(i === s.length) {
-            i = 0;
-        }
-        if(j === goal.length) {
-            return true
-        }
+    for(let i of s) {
+        s = s.slice(1) + s.slice(0,1);
+        if(s === goal) return true;
     }
-    return false;
+    return false
 }
 
-console.log(rotateString("abcde","cdeab"));
+console.log(rotateString("abcde","abced"));
