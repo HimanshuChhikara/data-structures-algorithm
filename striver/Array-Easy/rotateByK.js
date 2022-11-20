@@ -1,16 +1,20 @@
 function rotatebyK(nums,k) {
 
-    let i = 0;
-    let j = k;
-
-    while(j <= nums.length && i<=k) {
-        let temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-        i++;
-        j++;
+    
+    k %= nums.length
+    function reverse(i,j) {
+        while(i<j) {
+            let temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+            j++;
+        }
     }
-    return nums;
+
+    reverse(0,nums.length-1);
+    reverse(0,k-1);
+    reverse(k,nums.length-1)    
 }
 
 console.log(rotatebyK([1,2,3,4,5],3));
