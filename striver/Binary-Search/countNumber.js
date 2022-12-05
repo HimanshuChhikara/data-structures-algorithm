@@ -51,4 +51,4 @@ function binaryLast(nums,k) {
     return res;
 }
 
-console.log(countOccurance([1, 1, 2, 2, 2, 2, 2, 3],5));
+console.log(countOccurance([5,7,7,8,8,10],8));
