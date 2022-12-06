@@ -1,50 +1,50 @@
+/*
+Find first and last occurance of given target in sorted array
+
+First we can find the first occurance and store into a variable 
+then we can find the last occurance by taking setting last again to length - 1;
+
+at last we can return array with contains start and end variables
+*/
+
 function searchRange(nums,target) {
-    let res = [];
-    // if(nums.length === 0) {
-    //     return [-1,-1];
-    // }
-    // for(let i=0;i<nums.length;i++) {
-    //     if(nums[i] === target) {
-    //         if(res.length ===0 ) {
-    //            res[0] = i;
-    //            res[1] = i;
-    //         }
-    //         else {
-    //             res[1] = i;
-    //         }
-    //     }
-    //     else if(nums[i] > target) {
-    //         break
-    //     }
-    // }
+    let i = 0;
+    let j = nums.length - 1;
 
-    if(nums.length === 1 && nums[0] === target) {
-        return [0,0]
-    }
-    let start = 0;
-    let end = nums.length - 1;
+    // find start of number 
 
-    while(start <= end ) {
-        let mid = Math.floor((start + end) / 2);
+    while(i < j) {
+        let mid = Math.floor((i+j) /2);
 
-        if(target === nums[mid]) {
-            res.push(mid);
-            start = mid + 1;
-        } 
-        else if(target < nums[mid]) {
-            end = mid - 1;
+        if(nums[mid] >= target) {
+            j = mid;
         }
         else {
-            start = mid + 1;
+           i = mid + 1 
         }
     }
-    if(res.length === 0) {
-        return [-1,-1]
+
+    if(nums[i] !== target) return [-1,-1];
+
+    let start = i;
+
+    // find end
+
+    j = nums.length - 1;
+
+    while(i < j) {
+        let mid = Math.floor((i+j) / 2);
+
+        if(nums[mid] <= target) {
+            i = mid + 1;
+        }
+        else {
+            j = mid;
+        }
     }
-    // if(nums.length === 1 && target === nums[0]) {
-    //     res.push(0,0);
-    // }
-    return res;
+    let end = nums[i] === target ? i : i - 1
+
+    return [start,end];
 }
 
-console.log(searchRange([2,2],2));
+console.log(searchRange([5,7,7,8,8,10],8));
