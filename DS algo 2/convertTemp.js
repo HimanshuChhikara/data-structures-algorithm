@@ -10,4 +10,4 @@ function convertTemp(celsius) {
     return res;
 }
 
-console.log(convertTemp(36.50));
+console.log(convertTemp(36.50))
