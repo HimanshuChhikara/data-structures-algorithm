@@ -10,6 +10,7 @@ function reverse(s) {
         word += s[i];
     }
    }
+   // this is for last word
    word && res.unshift(word)
    return res.join(" ");
 }

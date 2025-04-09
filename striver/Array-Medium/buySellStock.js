@@ -1,27 +1,9 @@
 function sellStock(prices) {
-    // let buy = prices[0];
-    // let sell = prices[1];
-    // let maxProfit = 0;
-    // let currentProfit = 0;
-
-    // for(let i=0;i<prices.length;i++) {
-    //     if(prices[i] < buy) {
-    //         buy = prices[i];
-    //     }
-    //     else if(prices[i] > buy && i>1) {
-    //         sell = prices[i];
-    //     }
-    //     currentProfit = sell - buy;
-    //     maxProfit = Math.max(currentProfit, maxProfit);
-    // }
-
-    // return maxProfit;
     let max = 0;
-    let n = prices.length;
     let min = Number.MAX_VALUE;
     let currentPrice;
     
-    for(let i=0;i<n;i++) {
+    for(let i=0;i<prices.length;i++) {  
         min = Math.min(min,prices[i]);
         currentPrice = prices[i] - min;
         max = Math.max(max,currentPrice);
@@ -29,4 +11,19 @@ function sellStock(prices) {
     return max;
 }
 
-console.log(sellStock([7,6,4,3,1]))
+console.log(sellStock([1,2,3,4,5,4,3,6]))
+
+
+
+// dry run
+// i 0
+// min max currentPrice = price[i] - min   max (max,currentPrice) min (min,nums[i])
+
+// min = 1, current = 0 max = 0
+// min = 1 , current = 1, max =1
+// min = 1, current = 2, max = 2
+// min = 1, current = 3, max = 3
+// min = 1, current = 4, max = 4
+// min = 1, current = 2 max = 4
+// min = 1, current = 5, max = 5
+
