@@ -8,7 +8,7 @@ let longestConsecutive = function(nums) {
 
 
     for(let i=0;i<nums.length;i++) {
-        if(nums[i]-nums[i-1] == 1) {
+           if(nums[i]-nums[i-1] == 1) {
             count++;
             max = Math.max(max,count);
         }
@@ -20,7 +20,7 @@ let longestConsecutive = function(nums) {
     return max
 };
 
-console.log(longestConsecutive([1,0,1,2]));
+console.log(longestConsecutive([ 1, 2, 3, 4, 100, 200 ]));
 // [3,5,6,7,8]
 // [ 1, 2, 3, 4, 100, 200 ]
 

@@ -4,11 +4,9 @@ function rotatebyK(nums,k) {
     k %= nums.length
     function reverse(i,j) {
         while(i<j) {
-            let temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+            [nums[i],nums[j]] = [nums[j],nums[i]]
             i++;
-            j++;
+            j--;
         }
     }
 
@@ -17,4 +15,4 @@ function rotatebyK(nums,k) {
     reverse(k,nums.length-1)    
 }
 
-console.log(rotatebyK([1,2,3,4,5],3));
+console.log(rotatebyK([1,2,3,4,5,6,7],3));

@@ -17,18 +17,34 @@ function majorityElement(nums) {
     // }
     // return arr;
 
+    // let count = 0;
+    // let candidate;
+
+    // for(let i=0;i<nums.length;i++) {
+    //     if(count === 0) {
+    //         candidate = nums[i];
+    //     }
+    //     if(candidate === nums[i]) {
+    //         count++;
+    //     }
+    //     else {
+    //         count--;
+    //     }
+    // }
+    // return candidate;
+
     let count = 0;
-    let candidate;
+    let candidate
 
     for(let i=0;i<nums.length;i++) {
-        if(count === 0) {
-            candidate = nums[i];
+        if(count = 0) {
+            candidate = nums[i]
         }
-        if(candidate === nums[i]) {
+        if(candidate == nums[i]) {
             count++;
         }
         else {
-            count--;
+            count--
         }
     }
     return candidate;

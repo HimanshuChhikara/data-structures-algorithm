@@ -1,4 +1,4 @@
-function checkSorted(arr) {
+function checkSorted(nums) {
     // for(let i=1;i<arr.length;i++) {
     //     if(arr[i] < arr[i-1]) {
     //         return false;
@@ -6,18 +6,21 @@ function checkSorted(arr) {
     // }
     // return true
 
-   let count = 0;
+    let count = 0
+    let length = nums.length;
 
-   for(let i=0;i<arr.length;i++) {
-    if(arr[i] > arr[i+1]){
-        count++
+    if(nums[0] < nums[length -1]) count++
+
+    for(let i=0;i<length -1;i++) {
+        if(nums[i] > nums[i+1]) {
+            count++
+        }
+        if(count > 1) {
+            return false
+        }
     }
-   }
-   if(count > 1 || (count == 1 && nums[0] < nums[nums.length-1])) {
-    return false;
-   }
-   return true
+    return true
 }
 
-console.log(checkSorted([2,1]));
+console.log(checkSorted([2,1,3,4]));
 

@@ -1,6 +1,6 @@
 function findSecondLargest(arr) {
-    let largest = Math.max()
-    let secondLargest 
+    let largest = arr[0]
+    let secondLargest = -1;
 
     for(let i=0;i<arr.length;i++) {
         if(arr[i] > largest) {
