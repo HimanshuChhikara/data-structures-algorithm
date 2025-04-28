@@ -9,10 +9,7 @@ function sortColors(nums) {
 
     while(mid <= high) {
         if(nums[mid] === 0) {
-            temp = nums[low];
-            nums[low] = nums[mid];
-            nums[mid] = temp;
-
+            [nums[mid],nums[low]] = [nums[low],nums[mid]];
             // [0,0,2,1,1,2]
             low++;
             mid++;
@@ -21,9 +18,7 @@ function sortColors(nums) {
             mid++
         }
         else if(nums[mid] === 2) {
-            temp = nums[mid];
-            nums[mid] = nums[high];
-            nums[high] = temp;
+           [nums[mid],nums[high]] = [nums[high],nums[mid]]
             // [0,0,2,1,1,2]
             // [0,0,1,1,2,2]
             high--;
