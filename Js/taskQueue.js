@@ -1,4 +1,4 @@
 console.log("a");
-setTimeout(()=>console.log("set timeout"),0);
-Promise.resolve(() => console.log("Promise").then((res)=> res()));
+setTimeout(()=>console.log("set timeout"),1000);
+Promise.resolve().then(() => console.log("Promise"));
 console.log("b")

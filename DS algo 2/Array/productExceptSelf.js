@@ -1,38 +1,41 @@
 function productExceptSelf(nums) {
-    let res = [];
-    let product = 1;
+    // let res = [];
+    // let product = 1;
+
     // for(let i=0;i<nums.length;i++) {
     //     for(let j=0;j<nums.length;j++) {
     //         if(i === j) {
     //             continue;
     //         }
     //         else {
-    //             product = product * nums[j];
+    //             product = product * nums[j]
     //         }
-    //     }   
-    //     res.push(product);
-    //     product = 1;
+    //     }
+    //     res.push(product)
+    //     product = 1
     // }
+    // return res;
+    
 
-    let i = 0;
-    let j = 0;
+    // Prefix sufix
 
-    while(i <= j) {
-        if(i === j) {
-            j++;
-        }
-        else {
-            product = product * nums[j];
-            j++
-        }
-        if(j === nums.length) {
-            res.push(product)
-            product = 1;
-            i++;
-            j=0;
-        }
+    let n = nums.length;
+    let res = new Array(n).fill(1);
+
+    for(let i=1;i<n;i++) {
+        res[i] = res[i-1] * nums[i -1];
+    }
+
+    console.log("RES ...",res);
+    
+    let postfix = 1;
+
+    for(let j=n-1;j>=0;j--) {
+        res[j] *= postfix;
+        postfix *= nums[j]; 
     }
     return res;
+
 }
 
 console.log(productExceptSelf([1,2,3,4]));

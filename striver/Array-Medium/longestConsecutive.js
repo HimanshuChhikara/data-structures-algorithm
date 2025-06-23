@@ -20,7 +20,7 @@ let longestConsecutive = function(nums) {
     return max
 };
 
-console.log(longestConsecutive([ 1, 2, 3, 4, 100, 200 ]));
+console.log(longestConsecutive([2,20,4,10,3,4,5]));
 // [3,5,6,7,8]
 // [ 1, 2, 3, 4, 100, 200 ]
 

@@ -8,7 +8,7 @@ function threeSum(nums) {
 
     for(let i=0; i<nums.length; i++){
         if(nums[i] > target) break
-        if(i>0 && nums[i] == nums[i-1]) continue
+        if(i>0 && nums[i] === nums[i-1]) continue
 
         let j = i+1;
         let k = nums.length - 1;
@@ -16,20 +16,19 @@ function threeSum(nums) {
         while(j < k){
             let sum = nums[i] + nums[j] + nums[k];
 
-            if(sum === target){
+            if(sum > 0) {
+                k--
+            }
+            else if (sum < 0) {
+                j++
+            }
+            else {
                 results.push([nums[i],nums[j],nums[k]]);
-
-                while(nums[j]=== nums[j+1]) j++
-                while(nums[k] === nums[k-1]) k--
-
-                j++
-                k--
-            }
-            else if(sum<target) {
-                j++
-            }
-            else{
-                k--
+                j++;
+                k--;
+                while(i<j && nums[i] === nums[i-1]) {
+                    j++
+                }
             }
         }
     }

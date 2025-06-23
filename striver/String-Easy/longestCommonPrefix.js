@@ -8,7 +8,7 @@ function longestCommonPrefix(strs){
                 return res
             }
         }
-        res = res + char
+        res += char
 
     }
     return res;
