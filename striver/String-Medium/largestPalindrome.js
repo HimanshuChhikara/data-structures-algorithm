@@ -34,4 +34,4 @@ function largestPalindrome(str) {
     return str.substr(start,maxLen);
 }
 
-console.log(largestPalindrome("babad"))
+console.log(largestPalindrome("BANANAA"))

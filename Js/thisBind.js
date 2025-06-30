@@ -7,6 +7,7 @@ const obj = {
       console.log(this.name);
     },
     nestedFunction: function() {
+      name = 'dede'
       const inner = function() {
         console.log("INNER",this.name);
       };
@@ -20,7 +21,12 @@ const obj = {
   
   obj.regularFunction();
   obj.arrowFunction();
-  obj.nestedFunction();
+  let fun = {
+    name: 'Global Object'
+  }
+  let res = obj.bind(fun)
+  console.log("NESTED .....",res.nestedFunction())
+
   
   const detached = obj.regularFunction;
   detached();

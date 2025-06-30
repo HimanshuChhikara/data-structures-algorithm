@@ -1,14 +1,19 @@
 function sellStock(prices) {
-    let max = 0;
-    let min = Number.MAX_VALUE;
-    let currentPrice;
-    
-    for(let i=0;i<prices.length;i++) {  
-        min = Math.min(min,prices[i]);
-        currentPrice = prices[i] - min;
-        max = Math.max(max,currentPrice);
+    let left = 0;
+    let right = 1;
+    let maxProfit = 0;
+
+    while(i < prices.length) {
+        if(prices[left] < prices[right]) {
+            let profit = prices[right] - prices[left];
+            maxProfit = Math.max(maxProfit, profit); 
+        }
+        else{
+            left = right;
+        }
+        right++;
     }
-    return max;
+    return maxProfit;
 }
 
 console.log(sellStock([1,2,3,4,5,4,3,6]))

@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Js/nestedToDot.js"
+            "program": "${workspaceFolder}/striver/String-Medium/lengthOfLongestSubstring.js"
         }
     ]
 }
