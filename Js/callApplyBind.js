@@ -12,5 +12,8 @@ const archer = {
 }
 
 console.log(wizard)
-wizard.heal.call(archer, 30, 30); // Call method
+// wizard.heal.call(archer, 30, 30); // Call method
+// wizard.heal.apply(archer,[20,30]); // Apply method
+let result = wizard.heal.bind(archer,10,20);
+console.log("BIND",result()); // Bind method
 console.log(archer);
