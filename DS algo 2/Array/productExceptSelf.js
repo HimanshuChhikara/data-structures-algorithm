@@ -26,7 +26,6 @@ function productExceptSelf(nums) {
         res[i] = res[i-1] * nums[i -1];
     }
 
-    console.log("RES ...",res);
     
     let postfix = 1;
 
