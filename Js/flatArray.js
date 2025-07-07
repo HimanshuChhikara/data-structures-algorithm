@@ -13,7 +13,7 @@ function flatArray(arr,depth = 1) {
             res.push(...flatArray(arr[i],depth - 1))
         }
         else {
-            res.push(arr[i])
+            res.push(arr[i]);
         }
     }
     return res;
