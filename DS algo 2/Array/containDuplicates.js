@@ -31,18 +31,18 @@
 // console.log(res)
 
 function containDuplicates(arr) {
-    let obj = {};
+   let obj = {};
 
-    for(let i =0;i<arr.length;i++) {
+   for(let i =0;i<arr.length;i++) {
         if(obj[arr[i]]) {
             obj[arr[i]] += 1;
-            return true;
+            return true
         }
         else {
             obj[arr[i]] = 1;
         }
-    }
-    return false;
+   }
+   return false;
 }
 
 let res = containDuplicates([1,2,3,4,2]);

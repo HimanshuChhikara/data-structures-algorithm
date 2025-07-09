@@ -1,0 +1,2 @@
+// This principle says that Higher level module should not depend on low level module but rather both should depend on abstraction which means these both should have
+// one layer in between to communicate with each other.

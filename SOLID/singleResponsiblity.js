@@ -38,7 +38,6 @@ class GetInvoice {
     constructor(cart) {
         this.cart = cart;
     }
-
     generate() {
         let invoice = "Invoice:\n";
         this.cart.products.forEach(product => {

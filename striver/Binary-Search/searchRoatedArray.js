@@ -3,7 +3,7 @@ function search(nums,target) {
     let high = nums.length - 1;
 
     while(low <= high) {
-        let mid = parseInt((low + high) / 2);
+        let mid = low + Math.floor((high - low) / 2);
 
         if(nums[mid] === target) return mid;
 

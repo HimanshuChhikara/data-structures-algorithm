@@ -22,7 +22,7 @@ function findMin(nums) {
     let end = nums.length - 1;
 
     while(start < end) {
-        let mid = Math.floor((start + end) / 2);
+        let mid = left + Math.floor((end - start) / 2);
         
         if(nums[mid] > nums[end]) {
             start = mid + 1;
