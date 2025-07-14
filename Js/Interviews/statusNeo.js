@@ -16,4 +16,4 @@ function test() {
 console.log(test());
 
 // Indexing in mongoDB
-// Which search algo is used in indexing
+// Which search algo is used in indexing // B tree

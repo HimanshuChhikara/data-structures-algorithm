@@ -23,3 +23,5 @@ console.log("p3",p3)
 
 
 console.log("8")
+
+// 1 2 5 8 6 3 7 4 
