@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/striver/Array-Easy/mergeSortedArray.js"
+            "program": "${workspaceFolder}/DS algo 2/Array/moveZero.js"
         }
     ]
 }

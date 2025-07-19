@@ -4,7 +4,7 @@ let longestConsecutive = function(nums) {
     nums = nums.sort((a,b) => a-b);
 
     let max = 1;
-    let count =1;
+    let count = 1;
 
 
     for(let i=0;i<nums.length;i++) {
@@ -14,7 +14,7 @@ let longestConsecutive = function(nums) {
         }
         else if(nums[i] === nums[i-1]) continue
         else {
-            count = 1
+            count = 1;
         }
     }
     return max

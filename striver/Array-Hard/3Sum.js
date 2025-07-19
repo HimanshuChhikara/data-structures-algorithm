@@ -26,7 +26,7 @@ function threeSum(nums) {
                 results.push([nums[i],nums[j],nums[k]]);
                 j++;
                 k--;
-                while(i<j && nums[i] === nums[i-1]) {
+                while(j<k && nums[j] === nums[j-1]) {
                     j++
                 }
             }
@@ -35,4 +35,7 @@ function threeSum(nums) {
     return results
 }
 // [-4,-1,-1,0,1,2]
+
+// [3,2,3,-3,1,0]
+// [-3,0,1,2,3,3]
 console.log(threeSum([-1,0,1,2,-1,-4]));

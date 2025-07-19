@@ -1,37 +1,35 @@
 function fourSum(nums,target) {
-    nums = nums.sort((a,b) => a-b);
-
+    nums.sort((a,b) => a-b);
     let res = [];
 
-    if(nums === null || nums.length === 0) return res;
-
     for(let i=0;i<nums.length;i++) {
+        if( i> 0 && nums[i] === nums[i-1]) continue
         for(let j=i+1;j<nums.length;j++) {
-            let firstSum = nums[i] + nums[j];
+            if(j > i+1 && nums[j] === nums[j-1]) continue
 
-            let leftSum = target - firstSum;
+            let left = j + 1;
+            let right = nums.length - 1;
 
-            let front = j + 1;
-            let back = nums.length - 1;
+            while(left < right) {
+                let sum = nums[i] + nums[j] + nums[left] + nums[right];
+                if(sum === target) {
+                    res.push([nums[i],nums[j],nums[left],nums[right]]);
+                    left++
+                    right--
 
-            while(front < back) {
-                if(nums[front] + nums[back] === leftSum) {
-                    res.push([nums[i],nums[j],nums[front],nums[back]]);
-                    // while(front < back && nums[front] === res[2]) ++front;
-                    // while(front < back && nums[back] === res[3]) --back;
+                    while(left < right && nums[left] === nums[left - 1]) left++
+                    while(left < right && nums[right] === nums[right + 1]) right--
+                } 
+                else if(sum < target) {
+                    left++
                 }
-                else if(nums[front] + nums[back] < leftSum) {
-                    front++;
-                }
-                else if(nums[front] + nums[back] > leftSum) {
-                    back--;
+                else {
+                    right--
                 }
             }
-            // while(j+1 < nums.length && nums[j+1] === nums[j]) ++j;
         }
-        // while(i+1 < nums.length && nums[i+1] === nums[i]) ++i;
     }
     return res;
 }
 // [-2,-1,0,0,0,1,2];
-console.log(fourSum([1,0,-1,0,-2,2],0));
+console.log(fourSum([2,2,2,2,2],8));

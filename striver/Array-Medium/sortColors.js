@@ -5,7 +5,6 @@ function sortColors(nums) {
     let low = 0;
     let high = nums.length - 1;
     let mid = 0;
-    let temp = 0;
 
     while(mid <= high) {
         if(nums[mid] === 0) {
