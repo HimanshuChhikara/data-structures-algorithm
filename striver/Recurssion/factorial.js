@@ -4,7 +4,8 @@ function factorial(num) {
     let factNum = factorial(num - 1);
     let res = num * factNum;
 
-    return res
+    return num * factorial(num - 1)
+    // return res
 
 }
 

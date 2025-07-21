@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/DS algo 2/Array/moveZero.js"
+            "program": "${workspaceFolder}/striver/Recurssion/swapArray.js"
         }
     ]
 }
