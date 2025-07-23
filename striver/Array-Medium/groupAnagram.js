@@ -11,6 +11,7 @@ function groupAnagram(strs) {
         res[sortedS].push(s)
     }
 
+    console.log("Res....",res)
     return Object.values(res)
 }
 

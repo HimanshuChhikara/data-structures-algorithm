@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/minimum-size-subarray-sum/description/
+
 function minSubArrayLen(target,nums) {
 
     let i = 0;

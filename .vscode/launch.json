@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/striver/Recurssion/swapArray.js"
+            "program": "${workspaceFolder}/striver/String-Easy/isSubsequence.js"
         }
     ]
 }
