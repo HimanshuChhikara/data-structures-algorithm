@@ -4,6 +4,9 @@ const obj = {
     greet: function() {
         console.log(`Hello, ${this.name}`);
     },
+    greetArrow: () => {
+        console.log(`Hello, ${this.name}`);
+    },
     delayedGreet: function() {
         setTimeout(function() {
             console.log(`Delayed: ${this.name}`);
@@ -16,6 +19,13 @@ const obj = {
     }
 };
 
-obj.greet();
-obj.delayedGreet();
-obj.arrowDelayedGreet();
+let obj2 = {
+    name : "Himanshu"
+}
+
+let fn = obj.arrowDelayedGreet.call(obj2);
+// console.log("..",fn)
+
+// obj.greet();
+// obj.delayedGreet();
+// obj.arrowDelayedGreet();

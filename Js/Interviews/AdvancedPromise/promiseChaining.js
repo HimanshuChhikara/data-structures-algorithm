@@ -23,5 +23,7 @@ promise.then(()=> {
     console.log("Error")
 }).then(()=> {
     console.log("Try 3");
+}).finally(() => {
+    return console.log("FINALLy")
 })
 

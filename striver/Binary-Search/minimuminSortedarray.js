@@ -19,7 +19,7 @@ for that we can move our start to mid + 1 and let end be at same postion
 */
 function findMin(nums) {
     let start = 0;
-    let end = nums.length - 1;
+    let end = nums.length - 1;  
 
     while(start < end) {
         let mid = left + Math.floor((end - start) / 2);

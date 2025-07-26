@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/striver/String-Easy/isSubsequence.js"
+            "program": "${workspaceFolder}/striver/Sliding-window/rescuePeople.js"
         }
     ]
 }
