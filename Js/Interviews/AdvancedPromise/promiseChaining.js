@@ -7,7 +7,7 @@ function job() {
 function check() {
     return new Promise((resolve,reject) => {
         setTimeout(()=> {
-            reject("Checked");
+            resolve("Checked");
         },5000)
     })
 }

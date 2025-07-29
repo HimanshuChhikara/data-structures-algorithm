@@ -12,11 +12,12 @@ function himanshu() {
 function himanshu2() {
     return new Promise((resolve,reject) => {
         console.log("Promise 2");
+        // resolve()
     })
 }
 
 
-const result = async () => {
+async function result(){
     console.log("INSIDE RESULT");
     let data1 = await himanshu();
     const data2 = await himanshu2();
