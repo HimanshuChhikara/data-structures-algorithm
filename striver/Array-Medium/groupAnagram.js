@@ -1,18 +1,15 @@
 function groupAnagram(strs) {
-    const res = {}
-
+    let map = {}
     for(let s of strs) {
-        const sortedS = s.split('').sort().join('');
+        let sortedS = s.split("").sort().join("");
 
-        if(!res[sortedS]) {
-            res[sortedS] = []
+        if(!map[sortedS]) {
+            map[sortedS] = []
         }
 
-        res[sortedS].push(s)
+        map[sortedS].push(s);
     }
-
-    console.log("Res....",res)
-    return Object.values(res)
+    return Object.values(map)
 }
 
 console.log(groupAnagram(["act","pots","tops","cat","stop","hat"]))

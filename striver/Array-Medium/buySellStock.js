@@ -3,7 +3,7 @@ function sellStock(prices) {
     let right = 1;
     let maxProfit = 0;
 
-    while(i < prices.length) {
+    while(right < prices.length) {
         if(prices[left] < prices[right]) {
             let profit = prices[right] - prices[left];
             maxProfit = Math.max(maxProfit, profit); 
@@ -16,7 +16,7 @@ function sellStock(prices) {
     return maxProfit;
 }
 
-console.log(sellStock([1,2,3,4,5,4,3,6]))
+console.log(sellStock([7,1,5,3,6,4]))
 
 
 
