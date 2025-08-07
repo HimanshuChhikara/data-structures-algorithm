@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/striver/Sliding-window/rescuePeople.js"
+            "program": "${workspaceFolder}/striver/Stack-Medium/reverseNotation.js"
         }
     ]
 }
