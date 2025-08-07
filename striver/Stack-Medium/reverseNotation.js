@@ -33,8 +33,12 @@ function evaluate(stack,op) {
 
         }
         else if(op === "-") {
-            if(result === undefined) result = 0
-            result = stack.pop() - result;
+            if(result === undefined) {
+                result = stack.pop()
+            }
+            else {
+                result = stack.pop() - result;
+            }
             result = stack.pop() - result;
         }
         else if(op === "*") {
